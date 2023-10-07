@@ -88,7 +88,7 @@ def initialize_model(shape, layer_dims, nhood=1, num_classes=2, totalistic=False
     model.add(tf.keras.layers.Dense(num_classes,  activation='relu',
                                     kernel_initializer=tf.keras.initializers.he_normal(), 
                                     bias_initializer=tf.keras.initializers.he_normal()))
-    #model.add(tf.keras.layers.Reshape(target_shape=(-1, wspan, hspan)))
+    model.add(tf.keras.layers.Reshape(target_shape=(wspan, hspan)))
     return model
 
 
